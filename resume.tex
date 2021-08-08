@@ -11,8 +11,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{graphicx}
 \input{glyphtounicode}
 
+\graphicspath{ {./images/} }
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -61,7 +63,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -89,8 +91,8 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://www.linkedin.com/in/erikboeters/}{\Large Erik Boeters}} & E-mail : \href{mailto:e.boeters@gmail.com}{e.boeters@gmail.com}\\
   \href{https://www.linkedin.com/in/erikboeters/}{https://www.linkedin.com/in/erikboeters/} & Mobiel : +31-6-1348-1804 \\
+  \href{https://github.com/boetersep}{https://github.com/boetersep} & Woonplaats : Naaldwijk \\
 \end{tabular*}
-
 
 %-----------EDUCATION-----------------
 \section{Opleidingen}
@@ -101,6 +103,20 @@
     \resumeSubheading
       {Mondriaan onderwijsgroep}{Voorburg}
       {Technische kantoorautomatisering}{2000 -- 2004}
+      \resumeItemListStart
+        \resumeItem{Stage Thales (2003)}
+		  {Samen met een student embbeded software engineering klimaat-simulatiekast 
+		  aansturing software geschreven. Mijn rol was het ontwikkelen van de web-interface
+		  waar gebruikers via een formulier een test-cyclus kunnen definieren en kunnen
+		  uitvoeren. De uitkomst is een rapport met de daadwerktelijk gemeten temperatuur 
+		  en relatieve luchtvochtigheid waardes gedurende de test-cyclus.
+		  \par
+		  Java, JSP, MySQL, Linux
+		  }
+		\resumeItem{Stage 3e jaars studenten Java laten programmeren (2004)}
+		  {3e jaars studenten Java bijbrengen door ze een logfile parser te laten schrijven}
+      \resumeItemListEnd
+	  
   \resumeSubHeadingListEnd
 
 
@@ -110,47 +126,145 @@
 
     \resumeSubheading
       {ANWB}{Den Haag}
-      {Software Engineer / teamlead team @Fiets}{2014 -- Heden}
+      {Software Engineer}{2014 -- heden}
+	  \par
+	  Werkzaam bij afdeling bij ANWB Online, nu IT Kanalen, bestaande uit zgn. portal, 
+	  app en platform scrum teams. Als eerst 2 jaar in het "apps en mobiele website" team,
+	  daarna 5 jaar in het "Vrije tijd" team, later omgedoopt tot het Fiets team. De laatste
+	  2 jaar als techlead van het Fiets team. Een seletie van de activiteiten/projecten waar
+	  ik aan heb gewerkt:
       \resumeItemListStart
-        \resumeItem{Teamlead}
-          {Technische oplossingsrichting bepalen aan de hand van de architectuurrichtlijnen van de organisatie, coachen van trainees.}
-        \resumeItem{ANWB Fietslease funnel}
-          {Gebrukers in staat stellen om een fiets te configureren en te bestellen via de website van ANWB. Verantwoordelijk voor het schrijven van de API's en de frontend, geschreven in React en API's in Apigee.}
-        \resumeItem{ANWB Fietsknooppuntenplanner}
-          {De ANWB Fietsknooppuntenplanner stelt gebruikers in staat om een fietsroute te plannen over het landelijke Fietsknooppuntennetwerk via de website van ANWB. Verantwoordelijk voor het schrijven van de API's en de frontend, geschreven in React en API's in Apigee.}
-        \resumeItem{Data importer}
-          {De Data importer is een ETL integratie framework gebaseerd op Apache Camel om data uit diverse bronnen in Elasticsearch te importeren, geschreven in Java}
-        \resumeItem{Zoek \& Filter framework}
-          {Het Zoek \& Filter framework is gebouwd om met met minimale inspanning een dataset doorzoekbaar te maken via de website van ANWB. Verantwoordelijk voor het schrijven van de API's en de frontend, geschreven in React en API's in Apigee.}
-        \resumeItem{Mobiele website}
-          {De mobiele website van ANWB, bestaande uit het nieuws, verzekeringfunnel, verkeersinformatie, doorzoeken van Land van ANWB uitjes etc, geschreven in jQuery en een Java backend.}
-        \resumeItem{E-bike CMS}
-          {Beheren van e-bike informatie tbv de ANWB e-bike vergelijker (Zoek \& Filter) applicatie, een Mendix applicatie.}
+        \resumeItem{Techlead team Fiets (2019 -- heden)}
+          {Technische oplossingsrichting bepalen aan de hand van de architectuurrichtlijnen 
+		  van de organisatie.
+		  \par
+		  Coachen van een trainee, inwerken nieuwe collega's, job interviews afnemen, workshops 
+		  geven/organiseren voor andere techleads binnen de afdeling.
+		  }
+        \resumeItem{ANWB Fietsknooppuntenplanner (2021)}
+          {De ANWB Fietsknooppuntenplanner stelt gebruikers in staat om een fietsroute te
+		  plannen over het landelijke fietsknooppuntennetwerk via de website van ANWB.
+		  \par
+		  Ontwikkeld aan de backend en de frontend. De routing engine geconfigureerd (OSRM)
+		  zodat er priotiteit aan het fietsknooppuntennetwerk wordt gegeven wanneer er een 
+		  route wordt gepland. Dit project is in 2021 volledig herbouwd. In overleg met
+		  het collega's, management en architect heb ik er voor gekozen om de backend in
+		  NodeJS ipv Java te implementeren zodat frontend developers er eventueel 
+		  ook aan bij kunnen dragen.
+		  \par
+		  React, Less, Webpack, NodeJS, Apollo GraphQL, Cypress, Turf.js, GitLab, OSRM, Docker,
+		  Kubernetes, Flux, AWS, Memcached, Elasticsearch
+		  }
+        \resumeItem{ANWB Fietslease funnel (2020 -- heden)}
+          {Gebruikers in staat stellen om een e-bike te configureren en te bestellen via de 
+		  website van ANWB. Verantwoordelijk voor realisatie van de API, de frontend en
+		  de integratie met het CRM van ANWB. Ik onderhoud contact met de API leverancier 
+		  en leden van het CRM team van ANWB.
+		  \par
+		  React, Less, Cypress, Webpack, Apigee.
+		  }
+        \resumeItem{Data importer (2019 -- heden)}
+          {De Data importer is een ETL applicatie gebaseerd op Apache Camel om data
+		  uit diverse bronnen in Elasticsearch te importeren. De applicatie wordt door 5 andere
+		  teams binnen de afdeling gebruikt. Ik ondersteun deze teams bij het aansluiten van 
+		  nieuwe bronnen en troubleshooten bij verstoringen.
+		  \par
+		  Java, Spring Boot, Apache Camel, Elasticsearch
+		  }
+        \resumeItem{Zoek \& Filter framework (2018 -- heden)}
+          {Het Zoek \& Filter framework is gebouwd om met een minimale inspanning een dataset 
+		  doorzoekbaar te maken via de website van ANWB. Ik ben verantwoordelijk voor het schrijven 
+		  van de API's en de frontend. Ik ondersteund andere teams bij het implementeren van
+		  nieuwe Zoek \& Filter instanties, het configureren van Elasticsearch en troubleshoooting.
+		  \par
+		  React, Less, Webpack, Cypress, Apigee, Elasticsearch
+		  }
+        \resumeItem{E-bike detail informatie pagina  (2017 -- 2021)}
+          {Tonen van e-bike informatie, denk aan alegemene technische specificaties, een 
+		  integratie met de verzekeringfunnel van ANWB, voorraad informatie en dealerlocator.
+		  \par
+		  React, Less, Webpack, Cypress, Apigee, Elasticsearch
+		  }
+        \resumeItem{E-bike beheer tool  (2016 -- heden)}
+          {Beheren van e-bike informatie tbv de ANWB e-bike vergelijker (Zoek \& Filter)
+		  applicatie en detail informatie pagina. Voorheen was dit een Java/Angular applicatie maar
+		  deze is medio 2020 omgebouwd naar een Mendix applicatie door een externe partij.
+		  Kleine aanpassingen aan deze applicatie voer ik zelf uit.
+		  \par
+		  Java, Mendix, MongoDB}
+        \resumeItem{Mobiele website (2014 -- 2016)}
+          {De mobiele website van ANWB, bestaande uit het nieuws, verzekeringfunnel, 
+		  verkeersinformatie, zoekpagina voor van Land van ANWB uitjes. Een Java applicatie met
+		  diversie integraties naar CMS, externe API's en Elasticsearch. Deze applicatie
+		  is in 2016 uitgefaseerd.
+		  \par
+		  jQuery, Java, Jersey}
       \resumeItemListEnd
-
 
     \resumeSubheading
       {Eleven B.V.}{Rijswijk}
       {Software Engineer}{2009 -- 2014}
+	  \par
+	  Webbureau voor het MKB, levert websites, webshops en webapplicaties. Samen met een collega 
+	  (voormalig werkgever) ben ik hier gaan werken na de overname van zijn bedrijf, MediaActief.
+	  Bij Eleven heb ik het vak geleerd, ervaring opgedaan met o.a. Java, JAX-RS, JSP, Magento 
+	  en MySQL.
       \resumeItemListStart
         \resumeItem{Toolbox CMS}
-          {Modulair CMS framework gebruikt voor de website (en soms web apps) van de klanten, geschreven in Java, ExtJS en jQuery}
-        \resumeItem{Risico-inventarisatie en -evaluatie Koninklijke Metaalunie}
-          {De RI\&E Metaalbewerking is een praktisch instrument om te kunnen voldoen aan de wettelijke RI\&E-verplichting, geschreven in Java, ExtJS en jQuery}
+          {Modulair CMS framework gebruikt voor de website (en soms interne applicaties) 
+		  van klanten. Toolbox CMS is de core van het bedrijf; hier worden bijna alle projecten openin
+		  gebaseerd.
+		  \par
+		  Java, Spring, PostgreSQL, ExtJS, jQuery}
+        \resumeItem{Risico-inventarisatie en -evaluatie Koninklijke Metaalunie (2011)}
+          {De RI\&E Metaalbewerking is een praktisch instrument om te kunnen voldoen aan
+		  de wettelijke RI\&E-verplichting. Mijn rol was het ontwikkelen van de formulieren tbv de
+		  vragenlijsten.
+		  \par
+		  Java, ExtJS en jQuery}
+		\resumeItem{Portal Van den Bos Flowerbulbs (2009)}
+		  {Van den Bos Flowerbulbs zorgt voor de bewaring, preparatie, handel en export van bollen
+		  van lelies, freesia’s en calla’s. Zij hebben een website en portal laten realiseren door
+		  Eleven waar klanten bestellingen kunnen plaatsen. Mijn rol in dit project was het realiseren
+		  en onderhouden van de website. In een later stadium heeft Van den Bos Flowerbulbs besloten
+		  de data direct uit Navision te ontsluiten naar het portal. Voorheen werden bijvoorbeeld de 
+		  bestellingen in een database opgeslagen en dit werd door een gebruiker weer in Navision
+		  ingevoerd. Mijn rol was o.a. het realiseren van de koppeling tussen Navision en het portal.}
         \resumeItem{Diverse webshops}
-          {Verschillende webshops geconfigureerd en custom modules geschreven om bijvoorbeeld op maat gemaakt aluminium te versturen. Het gaat om Magento webshops.}
-        \resumeItem{Dianet intranet}
-          {Dianet is een kennis- en expertisecentrum op het gebied van dialyse. Mijn bijdrage aan het project: verwerken van de inschrijvingen voor trainingen die via de website aangevraagd worden, hieronder valt onder andere het afrekenen via iDeal, het afdrukken/downloaden van certificaten en het beschikbaar maken van lesmateriaal per training, geschreven in Java, ExtJS en jQuery}
+          {Verschillende webshops geconfigureerd en custom modules geschreven om bijvoorbeeld op
+		  maat gemaakt aluminium te versturen.
+		  \par
+		  PHP, Magento}
+        \resumeItem{Dianet intranet (2013)}
+          {Dianet is een kennis- en expertisecentrum op het gebied van dialyse. Mijn bijdrage aan het
+		  project: verwerken van de inschrijvingen voor trainingen die via de website aangevraagd 
+		  worden, hieronder valt onder andere het afrekenen via iDEAL, het afdrukken/downloaden 
+		  van certificaten en het beschikbaar maken van lesmateriaal per training.
+		  \par
+		  Java, ExtJS, jQuery, iDEAL integratie}
+        \resumeItem{Mijn Caiway (2011 -- 2014)}
+          {Caiway is een dienstverlener voor internet, telefonie en televisie in Westland en diverse 
+		  andere regio’s in het Land. Eleven werkt nauw samen met Caiway om de interne systemen te 
+		  ontsluiten naar de website en het self-service portal (mijn Caiway). Mijn rol als 
+		  webdeveloper is het ontwikkelen van extra functionaliteiten voor mijn Caiway. Denk aan de 
+		  funcionaliteit om het voor klanten mogelijk te maken een telefoonnummer door te schakelen. 
+		  Het registreren en communiceren van nieuwe inschrijvingen naar het klant contact centrum.
+		  \par
+		  Java, Maven JAX-RS, JSP, jQuery}
       \resumeItemListEnd
 
     \resumeSubheading
       {Allround Computer Service}{Maasdijk}
       {IT Field engineer}{2005 -- 2009}
+	  \par
+	  {ICT leverancier voor een verscheidenheid aan klanten. Van bloemenveiling tot advocatenkantoor 
+	  en van Stenaline tot particulier. Levert complete ICT inrichting en ontzorgt de klant.}
       \resumeItemListStart
         \resumeItem{Onderhoud hardware/software}
-          {Hardware en software onderhoud bij zowel zakelijke en particuliere klanten. Virussen verwijderen, backups inregelen, mail inregelen}
+          {Hardware en software onderhoud bij zowel zakelijke en particuliere klanten. Virussen
+		  verwijderen, backups inregelen, mail inregelen.}
         \resumeItem{Werkvoorbereiding}
-          {PC's, servers en netwerkapparatuur configureren}
+          {PC's, servers en netwerkapparatuur configureren.}
         \resumeItem{Helpdesk}
           {Storingen registreren en op afstand analyseren en oplossen.}
       \resumeItemListEnd
@@ -161,13 +275,13 @@
 \section{Vakkennis}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Talen}{: Javascript (ES6), PHP, SQL, Java, CSS, Less}
+      \textbf{Talen}{: Javascript (ES6), SQL, Java, CSS/Less}
     }
   \resumeSubHeadingListEnd
 
 \resumeSubHeadingListStart
     \item{
-      \textbf{Technologi\"{e}n}{: React, Redux, Webpack, NextJS, Node.js, Elasticsearch, GIS, Spring Boot, AWS, Apigee, Docker, Mendix, MySQL, Postgresql, ExtJS, Magento}
+      \textbf{Technologi\"{e}n/frameworks}{: React, Webpack, NextJS, NodeJS, Apollo, Elasticsearch, Spring Boot, AWS, Apigee, Redux, Docker, Mendix, MySQL, Postgresql, ExtJS, Magento}
     }
   \resumeSubHeadingListEnd
 
